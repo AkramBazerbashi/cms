@@ -1,0 +1,21 @@
+<div class="w-100">
+    <div class="d-flex justify-content-between align-items-center mb-2">
+        <p class="text text-muted text-bold mt-0 pt-0 mb-1 py-1">{{title}}</p>
+    </div>
+
+    <ngx-installments-item 
+        *ngFor="let installment of installments; let index=index"
+        (onRemove)="onRemove($event)"
+        [installment]="installment"
+        [installmentIndex]="index"
+        [isFirst]="installments.length == (index+1)">
+    </ngx-installments-item>
+  
+    <button *ngIf="installments.length < 4"
+        type="button"
+        class="btn btn-primary py-1 text-small feed-in-left"
+        (click)="onAdd()">
+        <nb-icon class="text-normal" icon="plus-circle-outline" pack="eva"></nb-icon>
+        Add Payment Part
+    </button>
+</div>

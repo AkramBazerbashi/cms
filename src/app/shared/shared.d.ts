@@ -1,0 +1,1 @@
+export type CheckArrayExist = (array: any[]) => boolean;

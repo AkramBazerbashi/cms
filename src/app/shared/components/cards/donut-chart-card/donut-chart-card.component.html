@@ -1,0 +1,30 @@
+<div class="donut-card box-shadow-sm p-3 d-flex flex-row" [style]="'border-color: '+colorSchema.slicesColor[2]+' !important; background-color: '+colorSchema.slicesColor[3]+' !important; min-height: 222px !important;'">
+    <div class="d-flex flex-column align-items-center justify-content-between">
+        <div class="d-flex align-items-start justify-content-between flex-column">
+            <!-- <div class="donut-card__icon">
+                <nb-icon *ngIf="name == 'Students' || name == 'Delegates'" icon="people-outline" pack="eva"></nb-icon>
+                <nb-icon *ngIf="name == 'Courses'" icon="clipboard-outline" pack="eva"></nb-icon>
+                <nb-icon *ngIf="name == 'Tests'" icon="book-outline" pack="eva"></nb-icon>
+            </div> -->
+            <div class="donut-card__heading pl-0">
+                <p class="text-nowrap text-bold text-green py-0 my-1">جميع&nbsp;{{name}}</p>
+                <p class="text text-bold text-green text-lg py-0 my-0 mt-1">{{totalCount}}</p>
+            </div>
+        </div>
+        <div>
+            <span class="text-x-small text-nowrap d-flex justify-content-start align-items-center my-2" *ngFor="let aNameSchema of nameSchema; let index= index">
+                <span class="d-inline-block p-1 rounded-circle bg-danger" [style]="'background-color: '+colorSchema.slicesColor[index]+' !important;'"></span> 
+                <span class="px-1 text-danger" [style]="'color: '+colorSchema.slicesColor[index]+' !important; font-size: 18px !important;'">{{aNameSchema}}</span>
+            </span>
+        </div>
+    </div>
+    <div>
+        <ngx-donut-chart 
+            [middleColor]="colorSchema.middle"
+            [middleTitle]="dataSchema.middle"
+            [slicesElementColor]="colorSchema.slicesColor"
+            [slicesElementDomain]="colorSchema.slicesDomain"
+            [data]="dataSchema.slices">
+        </ngx-donut-chart>
+    </div>
+</div>

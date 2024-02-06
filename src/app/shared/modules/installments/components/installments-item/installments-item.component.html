@@ -1,0 +1,36 @@
+<div class="d-flex justify-content-between align-items-start feed-in-left">
+    <div class="w-100 mb-1">
+        <label class="label-date" for="payment_{{installmentIndex}}">
+            <p class="label-date__title">
+                After {{model.num_date_to_paid | calcDaysBetween}} days
+            </p>
+            <input 
+                [nbDatepicker]="nbDate" 
+                [ngModelOptions]="{standalone: true}" 
+                (ngModelChange)="onModelChange($event)"
+                [ngModel]="model"     
+                class="label-date__btn" 
+                type="text" 
+                name="payment_{{installmentIndex}}" 
+                id="payment_{{installmentIndex}}">
+            <nb-datepicker #nbDate></nb-datepicker>
+        </label>
+        <input 
+            required 
+            min="0" 
+            type="number" 
+            name="input_amount" 
+            class="w-100 input-gray input input-small mb-2"
+            [placeholder]="isFirst ? 'final payment' : 'payment ' + (installmentIndex+1)"
+            [ngModelOptions]="{standalone: true}" 
+            [(ngModel)]="model.amount"
+            (ngModelChange)="onModelChange($event)"
+            [ngModel]="model">
+    </div>
+    <button 
+        type="button" 
+        class="btn btn-danger ml-2 text-bold" 
+        (click)="onRemove.emit({ model, index: installmentIndex })">
+        <nb-icon icon="close-outline" pack="eva"></nb-icon>
+    </button>
+</div>

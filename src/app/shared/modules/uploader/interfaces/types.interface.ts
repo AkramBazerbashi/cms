@@ -1,0 +1,10 @@
+export enum Keys {
+    COURSE = 'COURSE',
+    SUBJECT = 'SUBJECT',
+    PATH = 'PATH',
+    DEFAULT = 'DEFAULT',
+    STUDENT = 'STUDENT',
+    CATEGORY = 'CATEGORY',
+    ACCOUNT = 'ACCOUNT',
+    SETTINGS = 'SETTINGS',
+}

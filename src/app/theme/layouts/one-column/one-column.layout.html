@@ -1,0 +1,72 @@
+<nb-layout windowMode>
+    <nb-sidebar class="menu-sidebar" [class]="sidebar_class" tag="menu-sidebar">
+        <div class="menu-sidebar__logo">
+            <img src="../../../../assets/img/logo.png" class="menu-sidebar__logo-img" width="120" height="80">
+        </div>
+
+        <div class="w-100">
+            <ul class="w-100">
+                <li *ngFor="let item of MENU_ITEMS; let index=index" routerLinkActive="active" [routerLink]="item.link"
+                    class="cursor-pointer list-item py-3 text text-muted text-green text-bold">
+                    <img class="list-item__img" [src]="item.icon" [alt]="item.title" />
+                    <span *ngIf="!sideBarIsCollapsed" class="px-1"></span>
+                    <span *ngIf="!sideBarIsCollapsed" class="py-0 my-0">{{item.title}}</span>
+                </li>
+            </ul>
+        </div>
+
+        <div class="w-100 mt-4">
+            <ul class="w-100">
+                <li routerLink="/pages/settings" routerLinkActive="active"
+                    class="cursor-pointer list-item list-item-fixed py-3 text text-muted text-bold">
+                    <nb-icon icon="settings-2-outline" pack="eva"></nb-icon>
+                    <span *ngIf="!sideBarIsCollapsed" class="px-1"></span>
+                    <span *ngIf="!sideBarIsCollapsed" class="py-0 my-0">Setting</span>
+                </li>
+
+                <li class="cursor-pointer list-item-fixed py-3 text text-muted text-bold">
+                    <nb-icon icon="question-mark-circle-outline" pack="eva"></nb-icon>
+                    <span *ngIf="!sideBarIsCollapsed" class="px-1"></span>
+                    <span *ngIf="!sideBarIsCollapsed" class="py-0 my-0">Help</span>
+                </li>
+            </ul>
+        </div>
+
+        <div *ngIf="!sideBarIsCollapsed"
+            class="list-item-brand d-flex flex-column justify-content-between align-items-center">
+            <small class="my-0 py-0 text text-muted text-x-small text-nowrap text-bold">©2022 SIL, LLC. All Rights
+                Reserved.</small>
+            <div class="d-flex justify-content-between align-items-center">
+                <nb-icon class="text-gold text-x-small" icon="flash-outline" pack="eva"></nb-icon>
+                <small class="text-gold text-x-small text-nowrap">Powered By IRIS</small>
+            </div>
+        </div>
+        <!-- <ng-content select="nb-menu"></ng-content> -->
+    </nb-sidebar>
+
+    <nb-layout-column>
+        <nb-layout-header [ngClass]="{'close-sidebar': sideBarWidthState}">
+            <!-- <ngx-header></ngx-header> -->
+        </nb-layout-header>
+
+        <div class="layout-content">
+            <ng-content select="router-outlet"></ng-content>
+        </div>
+    </nb-layout-column>
+
+    <!-- <nb-layout-footer fixed>
+      <ngx-footer></ngx-footer>
+    </nb-layout-footer> -->
+
+    <nb-sidebar [class]="sidebarFilter_class" [ngClass]="{ 'active': filterSidebarStatus }" class="menu-sidebar__filter"
+        tag="menu-sidebar__filter">
+        <ng-content select="ngx-filter-sidebar"></ng-content>
+    </nb-sidebar>
+
+    <!-- <nb-sidebar [class]="sidebarCategory_class"
+        [ngClass]="{ 'active': categorySidebarStatus }" 
+        class="menu-sidebar__category" 
+        tag="menu-sidebar__category">
+        <ng-content select="ngx-category-sidebar"></ng-content>
+    </nb-sidebar> -->
+</nb-layout>

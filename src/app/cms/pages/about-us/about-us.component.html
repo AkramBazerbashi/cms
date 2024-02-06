@@ -1,0 +1,33 @@
+<ngx-page-header headerTitle="" *ngIf="userIsAuthorized">
+
+    <ngx-page-subtitle subtitle="تعديل معلومات عن التجمع">
+        <div class="col-12 col-sm-3 col-md-6 col-lg-12 d-flex justify-contnet-between align-items-start con">
+            <div style="margin-inline: 10px">
+                <nb-tabset>
+                    <nb-tab tabTitle="العربية">
+                        <p class="text text-muted text-bold mt-0 pt-0 mb-1 py-1 mt-4" style="text-align: right">تفاصيل عن التجمع</p>
+                        <angular-editor [(ngModel)]="about.description" [config]="config"></angular-editor>
+                        <p class="text text-muted text-bold mt-0 pt-0 mb-1 py-1 mt-4" style="text-align: right">الرؤية</p>
+                        <angular-editor [(ngModel)]="about.view" [config]="config"></angular-editor>
+                        <p class="text text-muted text-bold mt-0 pt-0 mb-1 py-1 mt-4" style="text-align: right">الرسالة</p>
+                        <angular-editor [(ngModel)]="about.message" [config]="config"></angular-editor>
+                    </nb-tab>
+                    <nb-tab tabTitle="English">
+                        <p class="text text-muted text-bold mt-0 pt-0 mb-1 py-1 mt-4" style="text-align: left">Details about us</p>
+                        <angular-editor [(ngModel)]="about.descriptionEn" [config]="configEn" class="en"></angular-editor>
+                        <p class="text text-muted text-bold mt-0 pt-0 mb-1 py-1 mt-4" style="text-align: left">Our vision</p>
+                        <angular-editor [(ngModel)]="about.viewEn" [config]="configEn" class="en"></angular-editor>
+                        <p class="text text-muted text-bold mt-0 pt-0 mb-1 py-1 mt-4" style="text-align: left">Our message</p>
+                        <angular-editor [(ngModel)]="about.messageEn" [config]="configEn" class="en"></angular-editor>
+                    </nb-tab>
+                </nb-tabset>
+                
+
+            </div>    
+        </div>
+        <button type="button" (click)="edit()" class="btn btn-primary mt-4" [disabled]="!about.description || !about.view || !about.message">
+            <nb-icon [icon]="'edit-outline'" pack="eva"></nb-icon>
+            تعديل
+        </button>
+    </ngx-page-subtitle>
+</ngx-page-header>

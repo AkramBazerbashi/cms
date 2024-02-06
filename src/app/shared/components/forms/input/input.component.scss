@@ -1,0 +1,58 @@
+// .ngx-base {
+//     width: 100%;
+    
+//     &__input {
+//         width: 100%;
+//         position: relative;
+
+//         &__field,
+//         &__field:focus {
+//             padding: 12px;
+//             border: 1px solid #EEEEEE;
+//             outline: none;
+//             background-color: transparent !important;
+//             color: var(--black) !important;
+//             border-radius: 5px;
+//             width: 100%;
+//             // max-width: 615px;
+//         }
+//         &__label {
+//             position: absolute;
+//             top: 0;
+//             transform: translate(0,0);
+//             transform-origin: 0 0;
+//             transition: transform .5s ease-in-out;
+//             line-height: 1.2;
+//             padding: 0px 2px;
+//             margin: 12px;
+//             background-color: var(--white);
+//             color: #AAAAAA;
+//             font: {
+//                 family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+//                 weight: lighter;
+//                 size: 1.2rem;
+//             }
+
+//             &.right {
+//                 right: 0;
+//             }
+//             &.left {
+//                 left: 0;
+//             }
+//         }
+
+//         &__message {
+//             color: #AAAAAA;
+//             @media screen and (max-width: 400px) {
+//                 font-size: .7rem;
+//             }
+//         }
+        
+//         &__field:focus + &__label, 
+//         &__field:valid + &__label,
+//         &__field.ng-touched + &__label,
+//         &__field.ng-dirty + &__label { 
+//             transform: translate(-4px, -21px) scale(0.8);
+//         }
+//     }
+// }

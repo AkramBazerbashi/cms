@@ -1,0 +1,225 @@
+@import './themes';
+// @import '~bootstrap/scss/variables';
+
+@mixin nb-overrides() {
+
+  /* ICON */
+  nb-icon {
+    line-height: .89 !important;
+  }
+
+  /* SELECT */
+  nb-select {
+    &.size-medium button {
+      padding: 12px 35.2px 12px 18px !important;
+      font-weight: 700 !important;
+      color: #b6b6b6 !important;
+
+      nb-icon {
+        right: 0.41rem !important;
+      }
+    }
+
+    &.select-green button {
+      border-color: #1e5b63 !important;
+      color: #1e5b63 !important;
+      font-weight: 700 !important;
+      background: transparent !important;
+
+      nb-icon {
+        color: #1e5b63 !important;
+        font-weight: 700 !important;
+      }
+    }
+
+    &.select-light button {
+      background: #ffffff !important;
+    }
+
+    &.no-border button {
+      border: none !important;
+      outline: none !important;
+      background-color: transparent !important;
+    }
+  }
+
+  /* TAGS */
+  nb-tag-list-with-input.status-basic {
+    background-color: #fff !important;
+    border-color: #fff !important;
+  }
+
+  /* BUTTON */
+  nb-toggle {
+    .toggle-label {
+      .toggle {
+        background-color: rgba(143, 155, 179, 0.34);
+        border: none;
+        height: 1.2rem;
+
+        .toggle-switcher {
+          top: -6px;
+        }
+
+        .toggle-switcher {
+          background-color: #ffffff;
+          box-shadow: 0 5px 10px rgba(0, 0, 0, .25);
+        }
+      }
+    }
+  }
+
+  nb-radio-group {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+    nb-radio {
+      label {
+        padding: 0 !important;
+
+        .native-input {
+          &:enabled {
+            &+.inner-circle {
+              background: transparent;
+            }
+
+            &+.outer-circle {
+              background: #333;
+            }
+          }
+
+          &:enabled:checked {
+            &+.inner-circle {
+              background: #333;
+            }
+
+            &+.outer-circle {
+              background: #333;
+            }
+          }
+        }
+
+        .outer-circle {
+          background: #333333;
+        }
+
+        .text {
+          font-weight: 600;
+        }
+      }
+    }
+  }
+
+  /* CARDS */
+  nb-card-header {
+    padding: 1rem 1.2rem !important;
+
+    &.no-header-border {
+      border-bottom: none;
+    }
+  }
+
+  /* PICKER */
+  nb-datepicker-container {
+    nb-calendar-day-cell.selected {
+      .cell-content {
+        background-color: #1e5b63 !important;
+        border-color: #1e5b63 !important;
+      }
+    }
+
+    nb-calendar-actions {
+      button {
+        &.appearance-ghost.status-primary {
+          color: #1e5b63 !important;
+        }
+
+        &.appearance-filled.status-primary {
+          background-color: #1e5b63 !important;
+          border-color: #1e5b63 !important;
+        }
+      }
+    }
+
+    nb-list-item.selected {
+      background-color: #1e5b63 !important;
+    }
+
+    nbInput.status-basic {
+
+      /* Chrome, Safari, Edge, Opera */
+      &::-webkit-outer-spin-button,
+      &::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+      }
+
+      /* Firefox */
+      &[type=number] {
+        -moz-appearance: textfield;
+      }
+
+      &:disabled {
+        background-color: #EEEEEE !important;
+      }
+    }
+  }
+
+  /* TABS */
+  nb-tabset {
+    .tabset {
+      border-radius: 9px;
+      overflow: hidden;
+      border: 1px solid #edf1f7;
+
+      .tab {
+        flex: 1;
+        position: relative;
+
+        &::after {
+          content: '';
+          position: absolute;
+          height: 80%;
+          width: 1px;
+          background: #edf1f7;
+          top: 10%;
+          right: 0;
+        }
+
+        &.active {
+          &::after {
+            height: 0;
+            width: 0;
+          }
+
+          .tab-link {
+            background: #1E5B63 !important;
+
+            &,
+            &:hover {
+              color: #fff !important;
+            }
+          }
+        }
+
+        .tab-link {
+          justify-content: center;
+          align-items: center;
+
+          &:hover {
+            color: #1E5B63 !important;
+          }
+
+          &::before {
+            width: 0 !important;
+          }
+        }
+      }
+    }
+  }
+
+  nb-tab {
+    padding: 2rem 2rem 1rem 2rem !important;
+  }
+}

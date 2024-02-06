@@ -1,0 +1,23 @@
+<nb-card class="shadow-sm">
+    <nb-card-header class="no-header-border">
+        <div style="background: #F5F5F5" class="d-flex justify-content-between align-items-center p-1">
+            <button type="button" class="btn btn-block mt-0"
+                *ngFor="let tab of tabs; let index=index"
+                [class]="tab.isActive ? 'btn-white' : 'btn-default'"
+                (click)="loadTabs(tab.component, tab.data, index)">
+                {{tab.tab}}
+            </button>
+        </div>
+    </nb-card-header>
+    <nb-card-body class="d-flex justify-content-center align-items-center flex-column">
+        <div class="text-center">
+            <p class="text text-bold my-0 py-0">$14,500.89</p>
+            <p class="text text-bold text-muted my-0 py-0">Total Payment</p>
+        </div>
+        <ng-template #view></ng-template>
+        <div class="text-center">
+            <p class="text text-bold my-0 py-0">$5,670.00</p>
+            <p class="text text-bold text-muted my-0 py-0">Our Total Sales</p>
+        </div>        
+    </nb-card-body>
+</nb-card>    

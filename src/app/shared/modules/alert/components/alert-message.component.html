@@ -1,0 +1,23 @@
+<div class="ngx-alert__container" *ngIf="alertList.length > 0">
+    <div *ngFor="let alert of alertList; let index=index" 
+        (click)="alertList.splice(index, 1)"
+        [style.background-color]="alert?.options?.bgCard"
+        class="ngx-alert feed-in-right d-flex justify-content-center align-items-center">
+
+        <!-- <ngx-logo-svg [status]="alert?.status"></ngx-logo-svg> -->
+        
+        <div class="ngx-alert__content d-flex justify-content-center align-items-start flex-column">
+            <p class="my-0 py-0 text text-light ngx-alert__title">
+                {{alert?.title }}
+            </p>
+            <p class="my-0 py-0 text text-light ngx-alert__subtitle">
+                {{alert?.subtitle | ngxRemoveUnderscore | ngxCapitalize }}
+            </p>
+        </div>
+    
+        <div class="ngx-alert__icon"
+            [style.background-color]="alert?.options?.bgIcon">
+            <nb-icon [icon]="alert?.options?.icon" pack="eva"></nb-icon>
+        </div>
+    </div>
+</div>

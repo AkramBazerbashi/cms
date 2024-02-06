@@ -1,0 +1,26 @@
+.actions {
+    position: relative;
+
+    &__list {
+        position: absolute;
+        right: 18px;
+        top: -10px;
+        background: #fff;
+        display: flex;
+        z-index: 999;
+        justify-content: center;
+        align-items: center;
+        border-radius: 3px;
+        box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
+        padding: 10px;
+
+        &-items {
+            margin: 0;
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            flex-direction: column;
+        }
+    }
+}

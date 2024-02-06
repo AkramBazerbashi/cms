@@ -1,0 +1,13 @@
+.badge-card {
+    padding: 2px 8px;
+    border-radius: 8px;
+    text-align: center;
+    display: inline-block;
+    
+    &__title {
+        color: #fff;
+        font-weight: 700;
+        font-size: 11px;
+        white-space: nowrap;
+    }
+}

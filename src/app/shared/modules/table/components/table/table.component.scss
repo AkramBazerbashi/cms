@@ -1,0 +1,127 @@
+@import '../../../../../theme/styles/themes.scss';
+
+@include nb-install-component() {
+    .table {
+        border-radius: 10px;
+        background-color: #fff;
+        border-left: 1px solid rgba(0,0,0,0.2);
+        border-right: 1px solid rgba(0,0,0,0.2);
+        border-bottom: 1px solid rgba(0,0,0,0.2);
+        
+        &-card {
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+        
+            &__header {
+                border-top: 1px solid #dddddd;
+                border-bottom: 1px solid #dddddd;
+                background-color: #fff;
+                padding: 12px 15px;
+            }
+            
+            &::ng-deep {
+                &tr {
+                    div {
+                        &[data-table="fixed-select"] {
+                            margin-top: 50%;
+                            margin-right: 15px;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                        }
+                    }
+
+                    td {
+                        border-top: 1px solid #dddddd;
+                        border-bottom: 1px solid #dddddd;
+                        background-color: #fff;
+                        text-align: center;
+                        padding: 15px 15px 12px 15px;    
+            
+                        &[data-table="checkbox"] {
+                            text-align: center;
+                            width: 1%;        
+                        }
+                        
+                        &[data-table="text-primary"] {
+                            p { 
+                                font-size: 14px !important;
+                                font-weight: 700;
+                                white-space: nowrap;
+                                color: #005CAF; 
+                                margin: 0;
+                                padding: 0;
+                            }
+                        }
+
+                        &[data-table="text-muted"] {
+                            p { 
+                                font-size: 14px !important;
+                                font-weight: 700;
+                                white-space: nowrap;
+                                color: #555555; 
+                                margin: 0;
+                                padding: 0;
+                                opacity: 0.8;
+                            }
+                        }
+                        
+                        &[data-table="popup-icon"] {
+                            nb-icon {
+                                color: #555555;
+                                opacity: 0.6;
+                                // @include nb-ltr(padding-left, 15px);
+                                // @include nb-rtl(padding-right, 15px);
+                                cursor: pointer;
+                            }        
+                        }
+                    }  
+                }
+            }
+        }
+
+    }
+}
+
+/* width */
+::-webkit-scrollbar {
+    height: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #fff; 
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #b7b7b7;
+    border-radius: 20px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+}
+
+
+thead{
+    position: sticky !important;
+    top: 0px !important;
+}
+
+
+
+
+
+
+
+::ng-deep .tableScroll .ngx-layout__scroll{
+    overflow-x: auto !important;
+    height: fit-content !important;
+}
+
+::ng-deep .result-btn{
+    margin-right: 10px !important;
+} 

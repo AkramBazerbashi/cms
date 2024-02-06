@@ -1,0 +1,12 @@
+<div class="table-filter__buttons w-100 flex-wrap d-flex justify-content-end align-items-center">
+    <div class="d-flex justify-content-between align-items-center flex-wrap">
+        <button type="button" (click)="onReset.emit()" class="btn btn-warning text text-light mx-3">
+            <nb-icon icon="refresh-outline" pack="eva"></nb-icon>
+            Reset
+        </button>
+        <button type="button" (click)="onSubmit.emit()" class="btn btn-primary">
+            <nb-icon icon="flash-outline" pack="eva"></nb-icon>
+            Submit
+        </button>
+    </div>
+</div>

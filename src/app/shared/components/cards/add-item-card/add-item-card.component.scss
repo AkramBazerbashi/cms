@@ -1,0 +1,19 @@
+.add-item-card {
+    cursor: pointer;
+    padding: 45px 0px;
+    margin-bottom: 20px;
+    width: 100%;
+    border: 3px dashed #aaaaaa;
+    border-radius: 5px;
+    background-color: #EFEFEF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    nb-icon,
+    p {
+        font-size: 21px;
+        font-weight: 700;
+        color: #aaaaaa;
+    }
+}

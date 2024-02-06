@@ -1,0 +1,23 @@
+<div class="selector" (ngxClickOutside)="isActive = false">
+    <div (click)="onShowSelector()" class="selector__wrapper cursor-pointer" [ngClass]="{ 'invalid': errorState }">
+        <div class="selector__wrapper-placeholder">
+            <p class="selector__wrapper-placeholder-title" [ngClass]="{ 'active': selected, 'invalid': errorState }">
+                {{placeholder}}
+            </p>
+            <nb-icon [icon]="isActive ? 'chevron-up-outline' : 'chevron-down-outline'" pack="eva"
+                class="selector__wrapper-placeholder-icon" [ngClass]="{ 'active': selected, 'invalid': errorState }">
+            </nb-icon>
+        </div>
+    </div>
+    <ul *ngIf="isActive" class="selector__wrapper-list">
+        <li class="p-2" *ngIf="searchable">
+            <input [(ngModel)]="searchQuery" (input)="onInputChange($event)" type="text" status="basic"
+                fieldSize="giant" placeholder="Search..." nbInput fullWidth>
+        </li>
+        <li *ngFor="let item of itemsList; let index=index" (click)="selectItem(item, index)"
+            class="selector__wrapper-item">
+            {{item[itemShowField] ?? item.name ?? item.username ?? item.title ?? item}}
+        </li>
+    </ul>
+    <span class="selector__label-invalid" *ngIf="errorState">{{errorMessage}}</span>
+</div>

@@ -1,0 +1,33 @@
+@import "../../../../../theme/styles/themes.scss";
+
+@include nb-install-component() {
+}
+
+.accordion {
+  width: 100%;
+  margin-bottom: 30px;
+  padding: 0px;
+  background: transparent;
+  transition: all 0.2s ease-in-out;
+  &.active {
+    background: #fff;
+    padding: 20px;
+  }
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &-btn {
+      padding-top: 12px;
+      padding-bottom: 12px;
+    }
+  }
+  &__body {
+    display: none;
+    margin-top: 20px;
+    transition: all 0.2s ease-in-out;
+    &.active {
+      display: block;
+    }
+  }
+}

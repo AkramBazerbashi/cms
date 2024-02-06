@@ -1,0 +1,42 @@
+@import "../../../theme/styles/themes.scss";
+
+@include nb-install-component() {
+    .breadcrumb-list {
+        background: none;
+        width: 100%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        
+        &__item {            
+            &::after {
+                content: ">";
+                color: darkgrey;
+                font-weight: bolder;
+                padding: 0px 18px;
+            }
+          
+            &:last-child {
+                &::after {
+                    content: " ";
+                }
+            }
+    
+            &-title, a {
+                color: darkgrey;
+                font-size: 1rem;
+                cursor: pointer;
+                
+                @media screen and (max-width: 600px) {
+                    font-size: 0.8em;
+                }
+
+                &.active { color: #000; }
+    
+                &:hover {
+                    color: dimgrey;
+                }
+            }
+        }    
+    }
+}

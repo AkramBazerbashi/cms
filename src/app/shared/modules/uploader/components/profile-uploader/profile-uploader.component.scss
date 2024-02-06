@@ -1,0 +1,36 @@
+.image-paner {
+  position: relative;
+  border-radius: 100%;
+  overflow: hidden;
+  outline: 4px solid #ffc107;
+  img {
+    height: 180px;
+    width: 180px;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  &__icon {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    height: 40%;
+    color: #fff;
+
+    p {
+      color: #fff;
+      font-size: 16px;
+    }
+
+    nb-icon {
+      font-size: 16px;
+      color: #fff;
+    }
+  }
+}

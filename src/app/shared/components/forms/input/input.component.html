@@ -1,0 +1,58 @@
+<div class="ngx-base form-group">
+    <p *ngIf="inputTitle">
+      {{inputTitle}}
+    </p>
+    <label [for]="inputName" class="ngx-base__input">
+      <input #base_input
+        type="text" 
+        autocomplete="off"
+        class="ngx-base__input__field"
+        (input)="inputChange.emit($event)"
+        [type]="inputType"
+        [name]="inputName"
+        [id]="inputName"
+        [required]="isRequired"
+        [placeholder]="placeholder"
+        [class]="inputClass"
+        [ngClass]="{ 'border border-danger': inputDomStatus(base_input, parentForm) }">
+
+      <span *ngIf="labelValue" 
+        class="ngx-base__input__label"
+        [class]="labelClass"
+        [ngClass]="{ 
+          'text text-danger': inputDomStatus(base_input, parentForm),
+          'left': labelDirection == 'ltr',
+          'right': labelDirection == 'rtl'
+        }">
+        {{labelValue}}
+      </span>
+      <p translate 
+        class="text text-danger m-0" 
+        *ngIf="inputDomStatus(base_input, parentForm)">
+        requiredErrorMessage
+      </p>
+      <!-- TODO  -->
+      <!-- &&!base_input.errors?.invalidEmail -->
+      <!-- <p translate 
+        class="text text-danger m-0" 
+        *ngIf="inputDomStatus(base_input, parentForm)&&base_input.errors?.invalidEmail">
+        Invalid Eamil.
+      </p> -->
+      <p class="ngx-base__input__message pt-3" *ngIf="!inputDomStatus(base_input, parentForm)&&inputMessage">
+        {{inputMessage}}
+      </p>
+    </label>
+  </div>
+
+  <!-- TODO - Use this template for base input -->
+  <!-- <div class="form-group">
+    <label for="exampleInputEmail1">Email address</label>
+    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+  </div> -->
+
+  <!-- TODO - User this template for checkbox  -->
+  <!-- <div class="form-group form-check">
+    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+    <label class="form-check-label" for="exampleCheck1">Remember me</label>
+  </div> -->

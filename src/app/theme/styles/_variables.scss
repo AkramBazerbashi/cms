@@ -1,0 +1,38 @@
+/* !!! BASE COLOR !!! */
+$blue: #2196f3;
+
+$blue-lighten-5: #e3f2fd;
+$blue-lighten-4: #bbdefb;
+$blue-lighten-3: #90caf9;
+$blue-lighten-2: #64b5f6;
+$blue-lighten-1: #42a5f5;
+
+$blue-darken-4: #0d47a1;
+$blue-darken-3: #1565c0;
+$blue-darken-2: #1976d2;
+$blue-darken-1: #1e88e5;
+
+$blue-accent-4: #2962ff;
+$blue-accent-3: #2979ff;
+$blue-accent-2: #448aff;
+$blue-accent-1: #82b1ff;
+
+$green-darken-4: #1E5B63; 
+
+/* DEFINE BASE VAR */
+$primary: $green-darken-4;
+$secondary: #424242;
+$accent: $blue-accent-1;
+$error: #ff5252;
+$danger: $error;
+$info: $blue;
+$success: #4caf50;
+$warning: #ffc107;
+$black: #000000;
+$white: #ffffff;
+$gray: #EFEFEF;
+$light-gray: #C1C3C8;
+$gold: #CBA770;
+
+/* BASE SHADOWS */
+$base-shadow: 0 1rem 2rem rgba($color: $black, $alpha: .2);

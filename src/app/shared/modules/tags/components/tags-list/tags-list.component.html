@@ -1,0 +1,17 @@
+<div class="w-100">
+    <p class="my-0 mb-1 text text-bold text-muted">{{title}}</p>
+    <nb-tag-list (tagRemove)="onRemove($event)">
+        <nb-tag 
+            *ngFor="let tree of treesList" 
+            [text]="tree"
+            removable>
+        </nb-tag>
+        <input fullWidth 
+            nbTagInput 
+            type="text" 
+            name="input_tag"
+            class="input-light input input-x-small"
+            (tagAdd)="onAdd($event)">
+    </nb-tag-list>
+    <small class="text text-muted">{{subtitle}}</small>
+</div>

@@ -1,0 +1,36 @@
+.form {
+    &__upload {
+        cursor: pointer;
+        border-radius: 50px;
+        margin-bottom: 0px;
+
+        &.active {
+            border: 2px dashed #AAAAAA;
+            background: #eee;
+            padding: 10px;
+            text-align: center;
+            border-radius: 50px;
+        }
+
+        img {
+            outline: 2px dashed #aaaaaa;
+            outline-offset: 3px;
+            max-height: 54px;
+            max-width: 54px;
+            border-radius: 50px;
+            object-fit: cover;
+            object-position: center;
+        }
+
+        nb-icon {
+            font-size: 30px;
+            color: #aaa;
+        }
+
+        p {
+            font-size: 10px;
+            font-weight: 700;
+            color: #aaa;
+        }
+    }
+}

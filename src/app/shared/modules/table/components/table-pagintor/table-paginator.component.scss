@@ -1,0 +1,77 @@
+.pagination {
+    display: flex;
+    margin-bottom: 4px;
+    width: 100%;
+    flex-wrap: wrap;
+    direction: rtl;
+
+    button,
+    button:focus {
+      border: none;
+      outline: none;
+      border-radius: 2px;
+      width: 30px;
+      height: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      color: #999999;
+      cursor: pointer;
+      background-color: transparent;
+        
+      &.next-btn,
+      &.prev-btn {
+        &:not([disabled]) {
+          color: #555555;
+        }
+      }
+
+      &.result-btn {
+        &:nth-child(2n) {
+          border-left: 1px solid #555555;
+          border-right: 1px solid #555555;
+        }  
+        
+        &:first-child {
+          border-left: 1px solid #555555 !important;
+        }
+        
+        &:last-child {
+          border-right: 1px solid #555555 !important;
+        }
+      }
+      
+
+      &[disabled] {
+        color: #888888;
+        cursor: auto;
+      }
+  
+      &.selected {
+        color: #555555;
+      }
+  
+      &:not(:last-child) {
+        margin-right: 4px;
+      }
+    }
+  }
+  
+  .select-page {
+    margin-left: auto;
+    margin-right: 25px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    select {
+      display: block;
+      border: 1px solid gray;
+      background: #eee;
+      border-radius: 4px;
+      width: 38px;
+      height: 30px;
+      color: gray;
+    }
+  }
+  

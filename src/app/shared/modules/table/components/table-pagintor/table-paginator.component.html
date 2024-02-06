@@ -1,0 +1,47 @@
+<div class="pagination">
+  <button type="button" 
+    [disabled]="value.page === 1" 
+    (click)="selectPage(1)"
+    class="prev-btn">
+    <nb-icon icon="arrowhead-right-outline" pack="eva"></nb-icon>
+  </button>
+  <button type="button" 
+    [disabled]="value.page === 1" 
+    (click)="selectPage(value.page - 1)"
+    class="prev-btn">
+    السابق
+  </button>
+  
+  <button type="button"
+    *ngFor="let page of visiblePages"
+    [ngClass]="value.page === page && 'selected'"
+    (click)="selectPage(page)"
+    class="result-btn">
+    {{ page }}
+  </button>
+  
+  <button type="button"
+    class="next-btn"
+    [disabled]="value.page === totalPages"
+    (click)="selectPage(value.page + 1)">
+    التالي
+  </button>
+  <button type="button"
+    class="next-btn"
+    [disabled]="value.page === totalPages"
+    (click)="selectPage(totalPages)">
+    <nb-icon icon="arrowhead-left-outline" pack="eva"></nb-icon>
+  </button>
+
+  <div class="select-page">
+    <p class="text text-bold text-muted mb-0">
+      العدد الكلي: <span class="text text-bold text-dark">{{total}}</span>
+    </p>
+    |
+    <p class="text text-bold text-muted mb-0">بكل صفحة:</p>
+    <select *ngIf="showSelectPageSize" [ngModel]="value.pageSize" (ngModelChange)="selectPageSize($event)">
+      <option *ngFor="let size of pageSizes" [value]="size">{{ size }}</option>
+    </select>
+  </div>
+</div>
+  

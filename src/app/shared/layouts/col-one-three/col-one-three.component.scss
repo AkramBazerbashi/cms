@@ -1,0 +1,34 @@
+.ngx-layout {
+    &__col {
+        overflow-y: auto; 
+        max-height: 72vh;
+
+        &-one {
+            flex: 0 0 33%;
+            max-width: 33%;
+        }
+        &-three {}
+    }
+}
+
+/* width */
+::-webkit-scrollbar {
+    height: 5px;
+    width: 0px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #fff; 
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #b7b7b7;
+    border-radius: 20px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+}

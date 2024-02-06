@@ -1,0 +1,30 @@
+@import "../../../../theme/styles/themes.scss";
+
+@include nb-install-component() {
+    .donut-card {
+        min-height: 150px; 
+        border: 2px solid #1E5B63; 
+        border-radius: 8px; 
+        background-color: #1E5B6326;
+    
+        &__icon {
+            background: #1E5B6326;
+            border: 1px solid rgba(84, 110, 122, 0.24);
+            display: inline-block;
+            text-align: center;
+            border-radius: 5px;
+            color: #1E5B63;
+            filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.25));
+            padding: 12px;
+
+            nb-icon {
+                font-size: 1.3rem;
+            }
+        }
+    
+        &__heading {
+            @include nb-rtl(padding-right, 10px);
+            @include nb-ltr(padding-left, 10px);
+        }
+    }
+}

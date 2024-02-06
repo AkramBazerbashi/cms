@@ -1,0 +1,22 @@
+<nb-card class="shadow-sm">
+    <nb-card-header class="no-header-border">
+        <div class="d-flex justify-content-between align-items-center">
+            <div>
+                <p class="py-0 my-0 text text-green text-bold">Students</p>
+                <small class="text text-muted">No. of students by each course</small>        
+            </div>
+            
+            <nb-select class="no-border" placeholder="Week">
+                <nb-option value="">
+                    <p class="text text-nowrap py-0 my-0">Option empty</p>
+                </nb-option>
+                <nb-option value="0">
+                    <p class="text text-nowrap py-0 my-0">Option 0</p>
+                </nb-option>
+            </nb-select>
+        </div>
+    </nb-card-header>
+    <nb-card-body>
+        <ngx-horizontal-line-chart></ngx-horizontal-line-chart>
+    </nb-card-body>
+</nb-card>    

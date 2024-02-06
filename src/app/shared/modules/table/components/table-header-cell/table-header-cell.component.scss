@@ -1,0 +1,40 @@
+@import '../../../../../theme/styles/themes.scss';
+
+@include nb-install-component() {
+    .header-cell {
+        &__item {
+            position: relative;
+            display: inline-block;
+            padding: 0px 20px 0px 0px;
+            margin-bottom: 4px;
+        
+            &-arrow {
+                text-decoration: none;
+                position: absolute;
+                width: 10px;
+                height: 8px;
+                background: #555555;
+                cursor: pointer;
+                clip-path: polygon(50% 0, 0% 100%, 100% 100%);
+    
+                @include nb-ltr(right, 0px);
+                @include nb-rtl(left, 0px);
+                
+                &:hover,
+                &:visited,
+                &:focus {
+                    background: #000;
+                }
+    
+                &-top {
+                    top: 0px;
+                }
+                &-bottom {
+                    transform: rotate(180deg);
+                    top: 11px;
+                }
+            }
+        }
+
+    }
+}

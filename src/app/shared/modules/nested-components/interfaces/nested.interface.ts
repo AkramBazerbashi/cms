@@ -1,0 +1,5 @@
+export enum Types {
+    ACCRODION = 'ACCRODION',
+    SELECTITEM = 'SELECTITEM',
+    CHECKBOX = 'CHECKBOX'
+}

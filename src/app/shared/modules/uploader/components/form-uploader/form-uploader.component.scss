@@ -1,0 +1,32 @@
+.form {
+    &__upload {
+        cursor: pointer;
+
+        &.active {
+            border: 2px dashed #AAAAAA;
+            background: #eee;
+            padding: 24px;
+            border-radius: 5px;
+            text-align: center;
+        }
+
+        img {
+            border: 2px dashed #aaaaaa;
+            padding: 10px;
+            border-radius: 5px;
+            object-fit: cover;
+            object-position: center;
+        }
+
+        nb-icon {
+            font-size: 50px;
+            color: #aaa;
+        }
+
+        p {
+            font-size: 10px;
+            font-weight: 700;
+            color: #aaa;
+        }
+    }
+}
