@@ -39,11 +39,10 @@ import { NgxDirectivesModule } from './modules/directives/directives.module';
 import { NgxNestedComponentsModule } from './modules/nested-components';
 import { NgxEchartsModule } from 'ngx-echarts';
 import { LazyLoadImageModule } from 'ng-lazyload-image';
-import { NgxSliderModule } from '@angular-slider/ngx-slider';
+// import { NgxSliderModule } from '@angular-slider/ngx-slider';
 import { StoreModule } from '@ngrx/store';
 import { SharedEffects, sharedReducers } from './store';
 import { EffectsModule } from '@ngrx/effects';
-import { ChartModule } from 'angular2-chartjs';
 import { CommonModule } from '@angular/common';
 
 const sharedComponents = [
@@ -76,7 +75,11 @@ const sharedComponents = [
 ];
 
 @NgModule({
-  declarations: [...sharedComponents, LongTextDialogComponent, ArrayToListDialogComponent],
+  declarations: [
+    ...sharedComponents,
+    LongTextDialogComponent,
+    ArrayToListDialogComponent
+  ],
   imports: [
     CommonModule,
     CoreModule,
@@ -93,7 +96,7 @@ const sharedComponents = [
     NgxEchartsModule,
     NbSelectModule,
     NbToggleModule,
-    // ChartModule,
+    // ChartModule, not IVY
     NbCardModule,
     RouterModule,
     NgxFileUploaderModule,
@@ -107,7 +110,7 @@ const sharedComponents = [
     NgxDirectivesModule,
     LazyLoadImageModule,
     NgxNestedComponentsModule,
-    // NgxSliderModule,
+    // NgxSliderModule, not IVY
     NgbDropdownModule,
     StoreModule.forFeature('shared', sharedReducers),
     EffectsModule.forFeature([SharedEffects])

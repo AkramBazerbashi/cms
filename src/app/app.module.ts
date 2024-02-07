@@ -29,7 +29,7 @@ import { NgxSidebarsModule } from './shared/modules/sidebars/sidebars.module';
 import { NbEvaIconsModule } from '@nebular/eva-icons';
 import { NgbModalModule, NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { AppReducers, IAppState, metaReducers } from './store/reducers';
-import { SortablejsModule } from 'ngx-sortablejs';
+// import { SortablejsModule } from 'ngx-sortablejs';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 
 @NgModule({
@@ -52,7 +52,7 @@ import { StoreDevtoolsModule } from '@ngrx/store-devtools';
     SideMenuLayoutModule.forRoot(),
     FeatureManagementModule.forRoot(),
     CmsModule,
-    SortablejsModule.forRoot({}),
+    // SortablejsModule.forRoot({}), not IVY
     NbSidebarModule.forRoot(),
     NbMenuModule.forRoot(),
     NbDatepickerModule.forRoot(),

@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Store } from '@ngrx/store';
-import { DialogConfig, DialogRef } from '../../../shared/modules/dialog';
+// import { DialogConfig, DialogRef } from '../../../shared/modules/dialog';
+import { DialogConfig } from '../../../shared/modules/dialog/models/dialog-config';
+import { DialogRef } from '../../../shared/modules/dialog/models/dialog-ref';
 import { IAppState } from '../../../store/reducers';
 
 @Component({

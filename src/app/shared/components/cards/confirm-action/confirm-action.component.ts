@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { DialogConfig, DialogRef } from '../../../modules/dialog';
+import { DialogConfig } from '../../../modules/dialog/models/dialog-config';
+import { DialogRef } from '../../../modules/dialog/models/dialog-ref';
 
 @Component({
     selector: 'ngx-confirm-action',
